@@ -1,5 +1,9 @@
 FLASK_APP = microblog.py
-FLASK_ENV=production
+FLASK_ENV = production
 
-MAIL_SERVER=localhost
-MAIL_PORT=8025
+MAIL_SERVER = 'smtp.mailtrap.io'
+MAIL_PORT = 2525
+MAIL_USERNAME =  '134fd26400821d'
+MAIL_PASSWORD = '81e299c934bf6b'
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
