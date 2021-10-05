@@ -40,3 +40,46 @@ Traceback (most recent call last):
     {% block app_content %}
 jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
 2021-10-01 10:45:34,132 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:50]
+2021-10-05 14:32:11,589 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:54:43,070 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:54:45,124 ERROR: Exception on /index [GET] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\personal\flask_project\app\routes.py", line 32, in index
+    return render_template('index.html', title='Home', form=form,
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\personal\flask_project\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\personal\flask_project\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "D:\personal\flask_project\app\templates\base.html", line 55, in block 'scripts'
+    {{ momena.include_moment() }}
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'momena' is undefined
+2021-10-05 14:55:28,556 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:57:02,449 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
