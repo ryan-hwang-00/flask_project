@@ -16,3 +16,7 @@ class Config(object):
     ADMINS = ['3305f5856a-9cfbf9@inbox.mailtrap.io']
 
     POSTS_PER_PAGE = 25
+    LANGUAGES = ['en', 'ko']
+
+    NAVER_CLIENT_ID = os.environ.get('NAVER_CLIENT_ID')
+    NAVER_CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET')
