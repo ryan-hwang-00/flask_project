@@ -1,4 +1,4 @@
-2021-10-12 15:56:25,737 ERROR: Exception on /translate [POST] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
+2021-10-12 15:49:59,615 ERROR: Exception on /translate [POST] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,7 +12,7 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/Users/hwang-ingyu/Documents/codings/flask_project/app/routes.py", line 17, in translate_text
     return jsonify({'text': translate(request.form['text'],
-  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/translate.py", line 40, in translate
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/translate.py", line 38, in translate
     response = urllib.request.urlopen(request, data=data.encode("utf-8"))
   File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
     return opener.open(url, data, timeout)
@@ -27,7 +27,7 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 400: Bad Request
-2021-10-12 15:56:45,749 ERROR: Exception on /translate [POST] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
+2021-10-12 15:51:21,449 ERROR: Exception on /translate [POST] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,7 +41,7 @@ Traceback (most recent call last):
     return func(*args, **kwargs)
   File "/Users/hwang-ingyu/Documents/codings/flask_project/app/routes.py", line 17, in translate_text
     return jsonify({'text': translate(request.form['text'],
-  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/translate.py", line 40, in translate
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/translate.py", line 38, in translate
     response = urllib.request.urlopen(request, data=data.encode("utf-8"))
   File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
     return opener.open(url, data, timeout)
@@ -56,5 +56,33 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 400: Bad Request
-2021-10-12 16:30:08,360 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:86]
-2021-10-12 17:02:58,546 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:74]
+2021-10-12 15:52:30,989 ERROR: Exception on /translate [POST] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/routes.py", line 17, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/translate.py", line 38, in translate
+    response = urllib.request.urlopen(request, data=data.encode("utf-8"))
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+2021-10-12 15:54:35,021 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]

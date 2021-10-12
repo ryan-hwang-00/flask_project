@@ -1,7 +1,7 @@
 import json
 import requests
 from flask_babel import _
-from app import app
+from flask import current_app
 
 # def translate(text, source_language, dest_language):
 #     if 'MS_TRANSLATOR_KEY' not in app.config or \
@@ -24,11 +24,13 @@ import sys
 import urllib.request
 
 def translate(text, source_language, dest_language):
-    if not app.config['NAVER_CLIENT_ID'] or not app.config['NAVER_CLIENT_SECRET']:
+    if not current_app.config['NAVER_CLIENT_ID'] or not current_app.config['NAVER_CLIENT_SECRET']:
         return _('Error: the translation service is not configured.')
 
-    client_id = app.config['NAVER_CLIENT_ID'] # 개발자센터에서 발급받은 Client ID 값
-    client_secret = app.config['NAVER_CLIENT_SECRET'] # 개발자센터에서 발급받은 Client Secret 값
+    print('source_language : ', source_language)
+
+    client_id = current_app.config['NAVER_CLIENT_ID'] # 개발자센터에서 발급받은 Client ID 값
+    client_secret = current_app.config['NAVER_CLIENT_SECRET'] # 개발자센터에서 발급받은 Client Secret 값
     encText = urllib.parse.quote(text)
     data = f"source={source_language}&target={dest_language}&text=" + encText
     url = "https://openapi.naver.com/v1/papago/n2mt"

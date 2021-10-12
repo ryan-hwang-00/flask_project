@@ -1,139 +1,114 @@
-2021-09-27 14:56:02,528 ERROR: Exception on /edit_profile [POST] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
+2021-10-12 17:03:06,513 ERROR: Exception on / [GET] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "D:\personal\flask_project\app\routes.py", line 99, in edit_profile
-    return render_template('edit_profile.html', title='Edit Profile',
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "D:\personal\flask_project\app\templates\edit_profile.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "D:\personal\flask_project\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "D:\personal\flask_project\app\templates\edit_profile.html", line 8, in block 'content'
-    {{ form.username.label }}<br>
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.EditProfileForm object' has no attribute 'username'
-2021-09-27 14:56:05,118 ERROR: Exception on /edit_profile [POST] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
-Traceback (most recent call last):
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "D:\personal\flask_project\app\routes.py", line 99, in edit_profile
-    return render_template('edit_profile.html', title='Edit Profile',
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 128, in _render
-    rv = template.render(context)
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
-    self.environment.handle_exception()
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "D:\personal\flask_project\app\templates\edit_profile.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "D:\personal\flask_project\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "D:\personal\flask_project\app\templates\edit_profile.html", line 8, in block 'content'
-    {{ form.username.label }}<br>
-  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 474, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.EditProfileForm object' has no attribute 'username'
-2021-09-27 14:56:24,408 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 14:56:50,273 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 14:56:56,650 ERROR: Exception on /edit_profile [POST] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
-Traceback (most recent call last):
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
-    self.dialect.do_execute(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1489, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1471, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/ctx.py", line 367, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2032, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1383, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1323, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/errors/handlers.py", line 9, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/base.html", line 17, in block 'navbar'
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'auth.login' instead?
+2021-10-12 17:05:07,129 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:74]
+2021-10-12 17:05:12,196 ERROR: Exception on /index [GET] [in /Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
     rv = self.dispatch_request()
-  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "D:\personal\flask_project\app\routes.py", line 93, in edit_profile
-    db.session.commit()
-  File "<string>", line 2, in commit
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
-    self._transaction.commit(_to_root=self.future)
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
-    self._prepare_impl()
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
-    self.session.flush()
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3339, in flush
-    self._flush(objects)
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3479, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
-    raise exception
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3439, in _flush
-    flush_context.execute()
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
-    rec.execute(self)
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 234, in save_obj
-    _emit_update_statements(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 998, in _emit_update_statements
-    c = connection._execute_20(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1611, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1478, in _execute_clauseelement
-    ret = self._execute_context(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1842, in _execute_context
-    self._handle_dbapi_exception(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2023, in _handle_dbapi_exception
-    util.raise_(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
-    raise exception
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1799, in _execute_context
-    self.dialect.do_execute(
-  File "d:\personal\flask_project\venv\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('test1', 'fd', 5)]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2021-09-27 14:57:12,823 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 15:46:00,536 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 15:46:07,373 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 16:14:49,560 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-27 16:43:11,099 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-29 10:43:18,925 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
-2021-09-29 10:54:56,953 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1489, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1471, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/ctx.py", line 367, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2032, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1383, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/app.py", line 1323, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/errors/handlers.py", line 9, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
+    {% block navbar %}
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/app/templates/base.html", line 17, in block 'navbar'
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/flask/helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "/Users/hwang-ingyu/Documents/codings/flask_project/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'auth.login' instead?
+2021-10-12 17:08:02,694 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:74]

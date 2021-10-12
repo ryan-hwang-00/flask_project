@@ -1,0 +1,109 @@
+2021-09-29 10:55:59,983 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
+2021-09-29 11:17:16,169 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
+2021-09-29 11:20:48,350 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:45]
+2021-09-30 09:42:31,399 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-09-30 09:44:42,702 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-09-30 10:26:23,885 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-09-30 10:30:11,029 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-09-30 10:31:40,141 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-09-30 10:35:07,025 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:48]
+2021-10-01 10:45:01,785 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:50]
+2021-10-01 10:45:06,200 ERROR: Exception on / [GET] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\personal\flask_project\app\routes.py", line 32, in index
+    return render_template('index.html', title='Home', form=form,
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\personal\flask_project\app\templates\index.html", line 33, in template
+    {% block app_content %}
+jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
+2021-10-01 10:45:34,132 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:50]
+2021-10-05 14:32:11,589 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:54:43,070 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:54:45,124 ERROR: Exception on /index [GET] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\personal\flask_project\app\routes.py", line 32, in index
+    return render_template('index.html', title='Home', form=form,
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\personal\flask_project\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "D:\personal\flask_project\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "D:\personal\flask_project\app\templates\base.html", line 55, in block 'scripts'
+    {{ momena.include_moment() }}
+  File "d:\personal\flask_project\venv\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'momena' is undefined
+2021-10-05 14:55:28,556 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-05 14:57:02,449 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:53]
+2021-10-12 13:59:23,531 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:07:08,200 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:18:35,827 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:18:41,748 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:34:50,420 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:35:22,325 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:36:39,710 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:38:53,331 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:57:46,592 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:59:17,598 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 14:59:59,310 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:02:04,388 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:02:52,471 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:03:53,970 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:06:32,831 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:07:43,585 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:08:46,310 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:10:04,764 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:23:25,252 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:26:00,237 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:27:03,469 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:27:11,283 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:28:33,262 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
+2021-10-12 15:49:40,903 INFO: Microblog startup [in /Users/hwang-ingyu/Documents/codings/flask_project/app/__init__.py:58]
