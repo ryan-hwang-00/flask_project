@@ -27,3 +27,39 @@ Traceback (most recent call last):
   File "/usr/local/Cellar/python@3.9/3.9.1_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 400: Bad Request
+2021-11-02 13:22:15,149 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:79]
+2021-11-02 13:23:36,281 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:79]
+2021-11-02 13:24:46,727 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:79]
+2021-11-02 13:24:51,025 ERROR: Exception on /search [GET] [in d:\personal\flask_project\venv\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\personal\flask_project\venv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\personal\flask_project\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\personal\flask_project\app\main\routes.py", line 151, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "D:\personal\flask_project\app\models.py", line 21, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "D:\personal\flask_project\app\search.py", line 20, in query_index
+    search = current_app.elasticsearch.search(
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\client\utils.py", line 301, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1765, in search
+    return self.transport.perform_request(
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\transport.py", line 458, in perform_request
+    raise e
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\transport.py", line 419, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 287, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "d:\personal\flask_project\venv\lib\site-packages\elasticsearch\connection\base.py", line 337, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2021-11-02 13:25:34,994 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:79]
+2021-11-02 13:26:39,182 INFO: Microblog startup [in D:\personal\flask_project\app\__init__.py:79]
